@@ -1,0 +1,389 @@
+<html>
+<head>
+    <!-- Judul Restoran yang muncul di Halaman Website. -->
+<title>
+   Depot Cakdjo Menu
+</title>
+
+    <!-- Link untuk menampilkan Logo Instagram & Phone. -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+    <!-- CSS yang di mana semua Design di susun di dalam sini. -->
+  <style>
+    body {
+            font-family: 'Roboto', 'sans-serif'; /* jenis font Menu.*/
+            background-color: #000; /* Warna latar belakang. */
+            color: white;  /* Warna Font Menu. */
+            margin: 0; /* Jarak di luar elemen (dengan elemen lain). */
+            padding: 0; /* Memberi Jarak di dalam elemen (antara isi dan batas elemen). */
+        }
+        .container {
+            max-width: 1200px; /* Hanya membatasi ukuran maksimal, tapi bisa lebih kecil jika dibutuhkan. */
+            margin: 0 auto; /* Jarak di luar elemen (dengan elemen lain). */
+            padding: 20px; /* Jarak di dalam elemen (antara isi dan batas elemen). */
+        }
+        .header {
+            text-align: center; /* Merubah tata letak teks agar terlihat rapi. */
+            margin-bottom: 20px; /* Memberi jarak di bawah elemen supaya tidak terlalu menempel dengan elemen lain. */
+        }
+        .header img {
+            width: 80px; /* Merubah Lebar ukuran. */
+            height: 80px; /* Merubah Tinggi ukuran. */
+            border-radius: 15px; /* Membuat logo menjadi semi kotak. */
+        }
+        .header h1 {
+            font-size: 36px; /* Merubah Ukuran Font. */
+            margin: 10px 0; /* Memberi Jarak di luar elemen (dengan elemen lain). */
+            color: white; /* Member warna */
+            font-family: 'Comic Sans MS'; /* Merubah Font judul. */
+        }
+        .menu-section {
+            display: flex; /* elemen bisa menyesuaikan ukurannya secara otomatis berdasarkan ruang yang tersedia dalam container. */
+            flex-wrap: wrap; /* elemen akan pindah ke baris baru saat lebar tidak cukup. */
+            justify-content: space-between; /* Memberi ruang kosong yang merata di antara elemen (elemen pertama dan terakhir menempel di tepi container). */
+        }
+        .menu-section .menu {
+            background-color: #181818; /* Menambahkan Backgoround Warna. */
+            padding: 20px; /* Memberi Jarak di dalam elemen (antara isi dan batas elemen). */
+            margin: 10px; /* Memberi Jarak di luar elemen (dengan elemen lain). */
+            flex: 1; /* elemen akan mengisi ruang yang tersedia secara merata. */
+            min-width: 250px; /* menetapkan lebar minimum suatu elemen. Ini berarti elemen tidak akan pernah lebih kecil dari 250px, meskipun layar atau kontainernya mengecil. */
+        }
+        .menu.special {
+            background-color: #800000; /* Warna latar belakang item menu "MENU PAKET SPESIAL PEDAS" merah maroon */
+        }
+        .menu h2 {
+            background-color: #c00; /* Memberi Warna Background */
+            padding: 10px; /* Memberi Jarak di dalam elemen (antara isi dan batas elemen). */
+            margin: -20px -20px 20px -20px; /* Memberi Jarak di luar elemen (dengan elemen lain). */
+            text-align: center; /* digunakan untuk memusatkan teks secara horizontal  */
+            font-size: 24px; /* Merubah Ukuran Font. */
+        }
+        .menu.special h2 {
+            background-color: #800000; /* Warna judul menu "MENU PAKET SPESIAL PEDAS" merah maroon */
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0; /* Memberi Jarak di dalam elemen (antara isi dan batas elemen). */
+        }
+        .menu ul li {
+            display: flex; /* elemen bisa menyesuaikan ukurannya secara otomatis berdasarkan ruang yang tersedia dalam container. */
+            justify-content: space-between; /* Memberi ruang kosong yang merata di antara elemen (elemen pertama dan terakhir menempel di tepi container). */
+            padding: 5px 0; /* Memberi Jarak di dalam elemen (antara isi dan batas elemen). */
+        }
+        .contact {
+            text-align: center; /* digunakan untuk memusatkan teks secara horizontal  */
+            margin-top: 20px;  /*  Jika ada elemen lain di atasnya, maka elemen ini akan memiliki jarak 20px dari elemen tersebut. */
+        }
+        .contact i {
+            margin-right: 10px; /* Jika ada elemen lain di kanannya, maka elemen ini akan memiliki jarak 10px dari elemen tersebut. */
+        }
+        .contact a {
+            color: white; /* Menentukan Warna */
+            text-decoration: none; /* menghapus dekorasi teks, seperti garis bawah (underline), garis atas (overline), atau garis tengah (line-through). */
+            margin: 0 10px; /* Jarak di luar elemen (dengan elemen lain). */
+        }
+        .footer {
+            text-align: center; /* digunakan untuk memusatkan teks secara horizontal  */
+            margin-top: 20px; /* Jika ada elemen lain di atasnya, maka elemen ini akan memiliki jarak 20px dari elemen tersebut. */
+        }
+        .footer img {
+            width: 30px; /* Merubah Lebar ukuran */
+            height: auto; /* Merubah Tinggi Ukuran */
+        }
+        .footer a {
+            color: white; /* Jarak di luar elemen (dengan elemen lain). */
+            text-decoration: none; /* menghapus dekorasi teks, seperti garis bawah (underline), garis atas (overline), atau garis tengah (line-through). */
+            margin: 0 10px; /* Jarak di luar elemen (dengan elemen lain). */
+        }
+        @media (max-width: 1200px) /* mengatur lebar maksimal sebuah elemen agar tidak melebihi 768px. */
+        {
+            .menu-section {
+                flex-direction: row; /* mengatur arah tata letak elemen menjadi horizontal (dari kiri ke kanan). */
+                flex-wrap: wrap; /* elemen akan pindah ke baris baru saat lebar tidak cukup. */
+                justify-content: space-around; /* Memberi ruang kosong yang merata di antara elemen (elemen pertama dan terakhir menempel di tepi container). */
+            }
+        }
+        @media (max-width: 768px) /* mengatur lebar maksimal sebuah elemen agar tidak melebihi 768px. */
+        {
+            .menu-section {
+                flex-direction: column; /* mengatur arah tata letak elemen menjadi vertikal (dari atas ke bawah). */
+                align-items: center; /* container akan disejajarkan di tengah secara vertikal jika container memiliki lebih banyak ruang pada sumbu vertikal. */
+            }
+            .contact a {
+                display: block; /* memiliki lebar penuh (full width) dari container-nya dan dimulai pada baris baru. */
+                margin: 10px 0; /* Jarak di luar elemen (dengan elemen lain). */
+            }
+            .footer a {
+                display: block;
+                margin: 10px 0; /* Jarak di luar elemen (dengan elemen lain). */
+            }
+        }
+        @media (max-width: 480px) /* mengatur lebar maksimal sebuah elemen agar tidak melebihi 480px. */
+            {
+            .header h1 {
+                font-size: 24px; /* Memberi Ukuran Font. */
+            }
+            .menu h2 {
+                font-size: 20px; /* Memberi ukuran Font */
+            }
+            .menu ul li {
+                flex-direction: column; /* mengatur arah tata letak elemen menjadi vertikal (dari atas ke bawah). */
+                align-items: flex-start; /* memiliki lebar penuh (full width) dari container-nya dan dimulai pada baris baru. */
+            }
+            .menu ul li span {
+                margin-bottom: 5px; /* Jika ada elemen lain di bawahnya, maka elemen ini akan memiliki jarak 5px dari elemen tersebut. */
+            }
+        }
+  </style>
+
+<!-- Judul Menu -->
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+    <img alt="Depot Cakdjo Logo" src="img/img.jpg"/>
+    <h1>
+        DEPOT CAKDJO
+    </h1>
+</div>
+
+<!-- Menu Sambelan -->
+<div class="menu-section">
+        <div class="menu">
+    <h2>SAMBELAN</h2>
+        <ul>
+    <li>
+        <span>Ayam kampung paha</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Ayam kampung dada</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Ayam paha</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Ayam dada</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Bebek paha</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Bebek dada</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Lele goreng</span>
+       <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Belut goreng</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Ati Rempelo goreng</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Cumi goreng tepung</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Udang goreng tepung</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Tempe goreng</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Tahu goreng</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Jamur krispi</span>
+        <span>Rp. 25.000</span>
+    </li>
+        <li>
+        <span>Nasi putih</span>
+        <span>Rp. 25.000</span>
+        </li>
+    </ul>
+</div>
+
+<!-- Menu Paket Pedas -->
+<div class="menu special">
+    <h2>MENU PAKET SPESIAL PEDAS</h2>
+        <ul>
+    <li>
+        <span>PAKET 1</span>
+        <span> Rp. 45.000</span>
+    </li>
+        <li>
+        <span> Sepiring nasi, lauk - pauk, sayur tumis, sambal pedas Spesial, Minuman dingin dan Buah Segar.</span>
+        </li>
+    <li>
+        <span>PAKET 2</span>
+        <span>Rp. 55.000</span>
+    </li>
+        <li>
+        <span>Dua piring nasi, lauk - pauk, sayur tumis, sambal pedas Spesial, Minuman dingin dan Buah Segar.</span>
+    </li>
+        <li>
+        <span>PAKET 3</span>
+        <span>Rp. 60.000</span>
+    </li>
+        <li>
+       <span>Empat piring nasi, lauk - pauk, sayur tumis, sambal pedas Spesial, Minuman dingin dan Buah Segar.</span>
+    </li>
+        <li>
+       <span>PAKET 4</span>
+       <span>Rp. 65.000</span>
+    </li>
+        <li>
+        <span>Empat piring nasi, lauk - pauk, sayur tumis, sambal pedas Spesial, Minuman dingin dan Buah Segar.</span>
+        </li>
+    </ul>
+</div>
+
+    <!-- Menu Minuman -->
+<div class="menu">
+    <h2>MINUMAN</h2>
+        <ul>
+    <li>
+        <span>Es teh</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Es Jeruk</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Es soda gembira</span>
+        <span>Rp. 8.000</span>
+    </li>
+        <li>
+        <span>Es gula</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Es susu coklat</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Jus Semangka</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Jus Melon</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Jus Alpukat</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Teh Hangat</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Jeruk hangat</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Susu coklat hangat</span>
+        <span>Rp. 5.000</span>
+    </li>
+        <li>
+        <span>Buah potong campur</span>
+        <span>Rp. 8.000</span>
+    </li>
+        <li>
+        <span>Buah potong yoghurt</span>
+        <span>Rp. 8.000</span>
+    </li>
+        <li>
+        <span>Es Teler Durian</span>
+        <span>Rp. 8.000</span>
+    </li>
+        <li>
+        <span>Es Campur</span>
+       <span>Rp. 18.000</span>
+        </li>
+    </ul>
+</div>
+
+    <!-- Menu Nasi Goreng -->
+<div class="menu">
+    <h2>NASI GORENG</h2>
+        <ul>
+    <li>
+        <span>Nasi Goreng Spesial</span>
+        <span>Rp. 40.000</span>
+        </li>
+    <li>
+        <span>Nasi Goreng Jawa</span>
+        <span>Rp. 25.000</span>
+        </li>
+    <li>
+        <span>Nasi Goreng Seafood</span>
+        <span>Rp. 35.000</span>
+        </li>
+    <li>
+        <span>Nasi Goreng Mawut</span>
+        <span>Rp. 25.000</span>
+        </li>
+    <li>
+        <span>Nasi Goreng Buto Ijo</span>
+        <span>Rp. 25.000</span>
+        </li>
+    </ul>
+</div>
+
+    <!-- Menu Mie & Bakso -->
+<div class="menu">
+    <h2>MIE &amp; BAKSO</h2>
+        <ul>
+    <li>
+       <span>Bakmie Goreng</span>
+       <span>Rp. 25.000</span>
+        </li>
+    <li>
+        <span>Mie Ayam</span>
+        <span>Rp. 25.000</span>
+        </li>
+    <li>
+        <span>Bakso Jumbo</span>
+        <span>Rp. 30.000</span>
+        </li>
+    <li>
+       <span>Bakso Spesial</span>
+       <span>Rp. 27.000</span>
+    </li>
+        </ul>
+    </div>
+</div>
+   <!-- Kontak -->
+<div class="contact">
+    <i class="fas fa-phone-alt"></i>
+
+    <!-- Link untuk WhatsApp -->
+    <a href="https://wa.me/628963686683"
+
+    style="color: white; text-decoration: none;">089-636-866-683</a>
+    <i class="fab fa-instagram"></i>
+
+    <!-- Link untuk Instagram -->
+    <a href="https://www.instagram.com/DJVN_09" 
+
+    style="color: white; text-decoration: none;">@DJVN_09</a>
+
+    </div>
+        </div>
+    </body>
+</html>
